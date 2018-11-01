@@ -6,15 +6,13 @@ spring:
 --- 
 
 spring: 
-  profiles:
-    active: dev
+  profiles: dev
   application:
     name: microservicecloud-config-dev 
     
 --- 
 
 spring: 
-  profiles:
-    active: test
+  profiles: test
   application:
     name: microservicecloud-config-test 
