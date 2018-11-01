@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+
+server: 
+  port: 8001
+  servlet:
+    context-path: /provider
+
+spring: 
+  profiles: dev
+  application:
+    name: microservice-config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+---
+ 
+server: 
+  port: 8002
+  servlet:
+    context-path: /provider
+
+spring: 
+  profiles: test
+  application:
+    name: microservice-config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
