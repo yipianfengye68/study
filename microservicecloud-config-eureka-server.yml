@@ -1,1 +1,47 @@
 
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+
+server: 
+  port: 7011
+  servlet:
+    context-path: /config/eureka/server
+
+spring: 
+  profiles: dev
+  application:
+    name: microservice-config-eureka-server
+
+eureka:
+  instance: 
+    hostname: eureka7011.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7011.com:7011/eureka/
+
+---
+ 
+server: 
+  port: 7012
+  servlet:
+    context-path: /config/eureka/server
+
+spring: 
+  profiles: test
+  application:
+    name: microservice-config-eureka-server
+
+eureka:
+  instance: 
+    hostname: eureka7012.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7012.com:7012/eureka/
