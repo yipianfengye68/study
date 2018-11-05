@@ -31,7 +31,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7011.com:7011/eureka/
+      defaultZone: http://eureka7011.com:7011/config/eureka/server
   instance:
     instance-id: atguigu-microservice-config-provider-dept:8021
     prefer-ip-address: true
